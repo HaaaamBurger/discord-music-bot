@@ -1,0 +1,6 @@
+discord:
+  bot:
+    security:
+      token: ${API_TOKEN}
+    common:
+      activity-message: ${ACTIVITY_MESSAGE}
