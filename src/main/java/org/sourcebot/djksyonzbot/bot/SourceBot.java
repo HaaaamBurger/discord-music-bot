@@ -1,8 +1,9 @@
-package org.sourcebot.djksyonzbot;
+package org.sourcebot.djksyonzbot.bot;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
+import org.sourcebot.djksyonzbot.common.types.Commands;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,8 +15,7 @@ public class SourceBot extends ListenerAdapter {
         }
 
 
-        //TODO create enum
-        if (event.getMessage().getContentDisplay().equals("!play")) {
+        if (event.getMessage().getContentDisplay().equals(Commands.PLAY.getCommand())) {
             event.getChannel().sendMessage("Lets play a music!").queue();
         }
 
